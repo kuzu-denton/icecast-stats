@@ -14,7 +14,7 @@ while true do
   listeners = response["icestats"]["listeners"]
   ap listeners
   data = {
-    values: { value: listeners }
+    values: { value: listeners.to_i }
   }
   @influxdb.write_point(@table, data)
   sleep 3
