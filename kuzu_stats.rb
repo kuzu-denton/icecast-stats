@@ -17,5 +17,5 @@ while true do
     values: { value: listeners }
   }
   @influxdb.write_point(@table, data)
-  sleep 1
+  sleep 3
 end
