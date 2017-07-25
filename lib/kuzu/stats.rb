@@ -4,11 +4,13 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 require "yaml"
 require "daemons"
-require "kuzu/stats/version"
+require "httparty"
 require "httparty"
 require "influxdb"
-require "httparty"
-require "kuzu/stats/icecast"
+require "icecast/admin"
+require "kuzu/stats/influx"
+require "kuzu/stats/version"
+require "kuzu/stats/service"
 
 module KUZU
   module Stats

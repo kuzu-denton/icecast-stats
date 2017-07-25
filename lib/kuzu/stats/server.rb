@@ -2,7 +2,7 @@ module KUZU::Stats
   module Server
     def self.run
       while true do
-        KUZU::Stats::IceCast.get_current_listeners
+        KUZU::Stats::Service.record_current_listeners
         sleep 3
       end
     end
