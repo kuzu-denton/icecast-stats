@@ -1,6 +1,6 @@
 influx:
-  name: admin
-  password: admin
+  name:
+  password:
 kuzu_stats:
-  name: admin
-  password: r8di0317
+  name:
+  password:
