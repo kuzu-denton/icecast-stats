@@ -2,5 +2,6 @@ influx:
   name:
   password:
 kuzu_stats:
+  url:
   name:
   password:
