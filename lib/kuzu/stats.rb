@@ -1,9 +1,10 @@
 lib = File.expand_path("../../../lib", __FILE__)
 CONFIG = File.expand_path("../../../config", __FILE__)
-
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
+
 require "yaml"
 require "daemons"
+require "kuzu/stats/version"
 
 module KUZU
   module Stats
@@ -13,5 +14,4 @@ module KUZU
   end
 end
 
-require "kuzu/stats/version"
 Daemons.run("./lib/kuzu/stats/server.rb")

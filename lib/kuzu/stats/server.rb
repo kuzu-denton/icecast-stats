@@ -1,5 +1,4 @@
 require "httparty"
-require "influxdb"
 require "kuzu/stats/icecast"
 
 module KUZU::Stats
