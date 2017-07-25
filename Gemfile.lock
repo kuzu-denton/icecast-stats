@@ -3,6 +3,7 @@ GEM
   specs:
     awesome_print (1.6.1)
     cause (0.1)
+    daemons (1.2.3)
     httparty (0.13.7)
       json (~> 1.8)
       multi_xml (>= 0.5.2)
@@ -11,14 +12,17 @@ GEM
       json
     json (1.8.3)
     multi_xml (0.5.5)
+    rake (11.1.2)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
   awesome_print!
+  daemons!
   httparty!
   influxdb!
+  rake!
 
 BUNDLED WITH
    1.15.3

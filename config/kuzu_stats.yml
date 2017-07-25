@@ -1,0 +1,6 @@
+influx:
+  name: admin
+  password: admin
+kuzu_stats:
+  name: admin
+  password: r8di0317
