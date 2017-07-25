@@ -1,6 +1,5 @@
 require "httparty"
 require "influxdb"
-require "ap"
 
 module KUZU
   module Stats
