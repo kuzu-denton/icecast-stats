@@ -1,6 +1,3 @@
-require "httparty"
-require "kuzu/stats/icecast"
-
 module KUZU::Stats
   module Server
     def self.run

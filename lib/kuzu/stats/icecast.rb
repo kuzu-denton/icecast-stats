@@ -1,6 +1,3 @@
-require "httparty"
-require "influxdb"
-
 module KUZU
   module Stats
     module IceCast
