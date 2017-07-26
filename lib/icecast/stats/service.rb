@@ -1,15 +1,12 @@
-class IceCast
-  module Stats
-    module Service
-      def self.record_current_listeners
-        listeners = IceCast::Admin.get_current_listeners
-        InfluxDB::Connection.write_current_listeners(listeners)
-      end
-
-      def self.record_unique_ips
-        ip_count = IceCast::Admin.get_ip_count
-        InfluxDB::Connection.write_ip_count(ip_count)
+module IceCast::Stats
+  class Service
+    def self.run
+      while true do
+        IceCast::Stats::Aggregator.record_current_listeners
+        sleep IceCast.config["stats"]["poll_interval"]
       end
     end
   end
 end
+
+IceCast::Stats::Service.run

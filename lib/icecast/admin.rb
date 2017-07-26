@@ -3,17 +3,16 @@ class IceCast
     CONFIG = IceCast.config["stats"]
 
     def self.get_current_listeners
-      stats = AdminClient.get("/stats")
+      stats = Client.get("/stats")
       stats["icestats"]["listeners"].to_i
     end
 
     def self.get_ip_count
-      clients = AdminClient.get("/listclients?mount=/#{CONFIG["mount"]}")
+      clients = Client.get("/listclients?mount=/#{CONFIG["mount"]}")
       clients["icestats"]["source"]["listener"].size
     end
 
-    class AdminClient
-
+    class Client
       def self.get(path)
         basic_auth = { username: CONFIG["name"], password: CONFIG["password"]}
         HTTParty.get("#{CONFIG["url"]}#{path}", basic_auth: basic_auth)
