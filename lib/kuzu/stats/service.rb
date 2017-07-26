@@ -1,4 +1,4 @@
-module KUZU
+class KUZU
   module Stats
     module Service
       def self.record_current_listeners
@@ -7,7 +7,7 @@ module KUZU
       end
 
       def self.record_unique_ips
-        ip_count = IceCast::Admin.get_unique_ips
+        ip_count = IceCast::Admin.get_ip_count
         InfluxDB::Connection.write_ip_count(ip_count)
       end
     end

@@ -1,6 +1,6 @@
 module InfluxDB
   class Connection
-    CONFIG = KUZU::CONFIG["influx"]
+    CONFIG = KUZU.config["influx"]
 
     def self.client
       @client ||= InfluxDB::Client.new "kuzu_stats",
