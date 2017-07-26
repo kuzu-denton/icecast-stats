@@ -6,11 +6,11 @@ require "yaml/store"
 require "daemons"
 require "httparty"
 require "httparty"
-require "kuzu"
+require "icecast"
 require "influxdb"
 require "icecast/admin"
 require "influxdb/connection"
-require "kuzu/stats/version"
-require "kuzu/stats/service"
+require "icecast/stats/version"
+require "icecast/stats/service"
 
-Daemons.run("./lib/kuzu/stats/server.rb")
+Daemons.run("./lib/icecast/stats/server.rb")

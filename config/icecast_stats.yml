@@ -1,7 +1,9 @@
 influx:
   name:
   password:
-kuzu_stats:
+  db:
+stats:
   url:
+  mount:
   name:
   password:

@@ -1,16 +1,16 @@
 # coding: utf-8
 lib = File.expand_path("../lib", __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require "kuzu/stats/version"
+require "icecast/stats/version"
 
 Gem::Specification.new do |spec|
-  spec.name          = "kuzu-stats"
-  spec.version       = Kuzu::Stats::VERSION
+  spec.name          = "icecast-stats"
+  spec.version       = IceCast::Stats::VERSION
   spec.authors       = ["Dave Sims"]
   spec.email         = ["davsims@gmail.com"]
 
   spec.summary       = %q{A simple daemon to collect stats from icecast2 and write them to influxdb.}
-  spec.homepage      = "https://github.com/kuzu-denton/kuzu-stats"
+  spec.homepage      = "https://github.com/kuzu-denton/icecast-stats"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'

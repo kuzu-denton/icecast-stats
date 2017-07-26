@@ -1,4 +1,4 @@
-class KUZU
+class IceCast
   module Stats
     module Service
       def self.record_current_listeners
