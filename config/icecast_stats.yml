@@ -1,9 +1,21 @@
-influx:
-  name:
-  password:
-  db:
-stats:
-  url:
-  mount:
-  name:
-  password:
+development:
+  influx:
+    name: admin
+    password: admin
+    db: icecast_stats_development
+test:
+  influx:
+    name: admin
+    password: admin
+    db: icecast_stats_test
+production:
+  influx:
+    name:
+    password:
+    db: kuzu_stats
+  stats:
+    url: "http://kuzu.stream:8000/admin"
+    mount: "kuzu.mp3"
+    name:
+    password:
+    poll_interval: 3
