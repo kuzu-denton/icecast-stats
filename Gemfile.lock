@@ -11,6 +11,7 @@ GEM
       cause
       json
     json (1.8.3)
+    minitest (5.8.4)
     multi_xml (0.5.5)
     rake (11.1.2)
 
@@ -22,6 +23,7 @@ DEPENDENCIES
   daemons!
   httparty!
   influxdb!
+  minitest!
   rake!
 
 BUNDLED WITH

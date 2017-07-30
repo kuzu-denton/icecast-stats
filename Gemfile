@@ -4,4 +4,7 @@ source 'https://rubygems.org' do
   gem "influxdb"
   gem "daemons"
   gem "rake"
+  group :development do
+    gem "minitest"
+  end
 end
