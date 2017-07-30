@@ -5,8 +5,8 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require "icecast/stats"
 
 options = {
-  app_name:            "icecast-stats-service",
-  ARGV:                ARGV,
+  app_name: "icecast-stats-service",
+  ARGV: ARGV
 }
 
 Daemons.run(File.join(File.dirname(__FILE__), "../lib/icecast/stats/service.rb"), options)
