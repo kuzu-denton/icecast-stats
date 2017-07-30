@@ -1,26 +1,30 @@
+require "forwardable"
+require "singleton"
+
 module InfluxDB
   class Connection
+    include Singleton
     CONFIG = IceCast.config["influx"]
 
-    def self.client
+    class << self
+      extend Forwardable
+      def_delegators :instance, :client, :write_current_listeners, :get_current_listeners
+    end
+
+    def client
       @client ||= InfluxDB::Client.new CONFIG["db"],
         host: "localhost",
         username: CONFIG["name"],
         password: CONFIG["password"]
     end
 
-    def self.write_ip_count(ip_count)
-      ip_count_data = { values: { value: ip_count } }
-      InfluxDB::Connection.client.write_point("unique_ips", ip_count_data)
-    end
-
-    def self.write_current_listeners(current_listeners)
+    def write_current_listeners(current_listeners)
       current_listeners_data = { values: { value: current_listeners } }
-      InfluxDB::Connection.client.write_point("current_listeners", current_listeners_data)
+      client.write_point("current_listeners", current_listeners_data)
     end
 
-    def self.get_current_listeners
-      InfluxDB::Connection.client.query("select * from current_listeners")
+    def get_current_listeners
+      client.query("select * from current_listeners")
     end
   end
 end
