@@ -1,4 +1,4 @@
-class IceCast
+module IceCast
   class Admin
     CONFIG = IceCast.config["stats"]
 

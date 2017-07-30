@@ -11,6 +11,6 @@ require "influxdb"
 require "icecast/admin"
 require "influxdb/connection"
 require "icecast/stats/version"
-require "icecast/stats/service"
+require "icecast/stats/aggregator"
 
-Daemons.run("./lib/icecast/stats/server.rb")
+Daemons.run("#{lib}/icecast/stats/service.rb")
