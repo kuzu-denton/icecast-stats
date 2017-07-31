@@ -5,6 +5,9 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require "icecast/stats"
 
 options = {
+  log_output: true,
+  output_logfilename: "icecast_stats.txt",
+  logfilename: "icecast_stats.log",
   app_name: "icecast-stats-service",
   ARGV: ARGV
 }
